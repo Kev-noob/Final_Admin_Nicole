@@ -93,6 +93,7 @@
             this.CO_container.Controls.Add(this.CO_selectToDisplay);
             this.CO_container.Controls.Add(this.CO_selectCourse);
             this.CO_container.Controls.Add(this.Available_offering);
+            this.CO_container.Controls.Add(this.LINE);
             this.CO_container.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CO_container.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.CO_container.ForeColor = System.Drawing.Color.Maroon;
@@ -103,10 +104,10 @@
             // 
             // CO_dropOffer
             // 
-            this.CO_dropOffer.BackColor = System.Drawing.Color.Transparent;
+            this.CO_dropOffer.BackColor = System.Drawing.Color.LightPink;
             this.CO_dropOffer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CO_dropOffer.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CO_dropOffer.ForeColor = System.Drawing.Color.Black;
+            this.CO_dropOffer.ForeColor = System.Drawing.Color.White;
             this.CO_dropOffer.Location = new System.Drawing.Point(589, 70);
             this.CO_dropOffer.Name = "CO_dropOffer";
             this.CO_dropOffer.Size = new System.Drawing.Size(98, 24);
@@ -118,8 +119,9 @@
             // Select_course
             // 
             this.Select_course.AutoSize = true;
+            this.Select_course.BackColor = System.Drawing.Color.Pink;
             this.Select_course.Font = new System.Drawing.Font("Noto Sans JP Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Select_course.ForeColor = System.Drawing.Color.Black;
+            this.Select_course.ForeColor = System.Drawing.Color.White;
             this.Select_course.Location = new System.Drawing.Point(37, 32);
             this.Select_course.Name = "Select_course";
             this.Select_course.Size = new System.Drawing.Size(119, 24);
@@ -128,10 +130,10 @@
             // 
             // CO_selectToDisplay
             // 
-            this.CO_selectToDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.CO_selectToDisplay.BackColor = System.Drawing.Color.LightPink;
             this.CO_selectToDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CO_selectToDisplay.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CO_selectToDisplay.ForeColor = System.Drawing.Color.Black;
+            this.CO_selectToDisplay.ForeColor = System.Drawing.Color.White;
             this.CO_selectToDisplay.Location = new System.Drawing.Point(693, 70);
             this.CO_selectToDisplay.Name = "CO_selectToDisplay";
             this.CO_selectToDisplay.Size = new System.Drawing.Size(98, 24);
@@ -154,7 +156,7 @@
             // 
             this.Available_offering.AllowUserToAddRows = false;
             this.Available_offering.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Available_offering.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.Available_offering.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.Available_offering.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Available_offering.ColumnHeadersHeight = 40;
             this.Available_offering.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -169,7 +171,7 @@
             // 
             // CO_sidePanel
             // 
-            this.CO_sidePanel.BackColor = System.Drawing.Color.White;
+            this.CO_sidePanel.BackColor = System.Drawing.Color.Pink;
             this.CO_sidePanel.Controls.Add(this.CO_Clear);
             this.CO_sidePanel.Controls.Add(this.CO_CreateOffering);
             this.CO_sidePanel.Controls.Add(this.Status);
@@ -197,7 +199,6 @@
             this.CO_sidePanel.Controls.Add(this.CO_subject);
             this.CO_sidePanel.Controls.Add(this.course);
             this.CO_sidePanel.Controls.Add(this.CO_course);
-            this.CO_sidePanel.Controls.Add(this.LINE);
             this.CO_sidePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.CO_sidePanel.Location = new System.Drawing.Point(0, 47);
             this.CO_sidePanel.Name = "CO_sidePanel";
@@ -223,13 +224,13 @@
             // 
             // CO_CreateOffering
             // 
-            this.CO_CreateOffering.BackColor = System.Drawing.Color.DimGray;
+            this.CO_CreateOffering.BackColor = System.Drawing.Color.Transparent;
             this.CO_CreateOffering.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.CO_CreateOffering.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.CO_CreateOffering.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.CO_CreateOffering.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CO_CreateOffering.Font = new System.Drawing.Font("Noto Sans JP", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.CO_CreateOffering.ForeColor = System.Drawing.Color.White;
+            this.CO_CreateOffering.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CO_CreateOffering.Location = new System.Drawing.Point(705, 136);
             this.CO_CreateOffering.Name = "CO_CreateOffering";
             this.CO_CreateOffering.Size = new System.Drawing.Size(103, 28);
@@ -242,7 +243,7 @@
             // 
             this.Status.AutoSize = true;
             this.Status.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.ForeColor = System.Drawing.Color.Black;
+            this.Status.ForeColor = System.Drawing.Color.White;
             this.Status.Location = new System.Drawing.Point(701, 15);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(53, 19);
@@ -251,7 +252,7 @@
             // 
             // CO_close
             // 
-            this.CO_close.BackColor = System.Drawing.Color.Transparent;
+            this.CO_close.BackColor = System.Drawing.Color.White;
             this.CO_close.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.CO_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CO_close.Font = new System.Drawing.Font("Noto Sans JP Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -266,7 +267,7 @@
             // 
             // CO_open
             // 
-            this.CO_open.BackColor = System.Drawing.Color.Transparent;
+            this.CO_open.BackColor = System.Drawing.Color.White;
             this.CO_open.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.CO_open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CO_open.Font = new System.Drawing.Font("Noto Sans JP Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -283,7 +284,7 @@
             // 
             this.School_Year.AutoSize = true;
             this.School_Year.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.School_Year.ForeColor = System.Drawing.Color.Black;
+            this.School_Year.ForeColor = System.Drawing.Color.White;
             this.School_Year.Location = new System.Drawing.Point(525, 117);
             this.School_Year.Name = "School_Year";
             this.School_Year.Size = new System.Drawing.Size(79, 19);
@@ -303,7 +304,7 @@
             // 
             this.maximum_student.AutoSize = true;
             this.maximum_student.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maximum_student.ForeColor = System.Drawing.Color.Black;
+            this.maximum_student.ForeColor = System.Drawing.Color.White;
             this.maximum_student.Location = new System.Drawing.Point(525, 69);
             this.maximum_student.Name = "maximum_student";
             this.maximum_student.Size = new System.Drawing.Size(140, 19);
@@ -323,7 +324,7 @@
             // 
             this.Time_end.AutoSize = true;
             this.Time_end.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Time_end.ForeColor = System.Drawing.Color.Black;
+            this.Time_end.ForeColor = System.Drawing.Color.White;
             this.Time_end.Location = new System.Drawing.Point(612, 18);
             this.Time_end.Name = "Time_end";
             this.Time_end.Size = new System.Drawing.Size(71, 19);
@@ -334,7 +335,7 @@
             // 
             this.Time_start.AutoSize = true;
             this.Time_start.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Time_start.ForeColor = System.Drawing.Color.Black;
+            this.Time_start.ForeColor = System.Drawing.Color.White;
             this.Time_start.Location = new System.Drawing.Point(526, 16);
             this.Time_start.Name = "Time_start";
             this.Time_start.Size = new System.Drawing.Size(79, 19);
@@ -379,7 +380,7 @@
             // 
             this.Days.AutoSize = true;
             this.Days.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Days.ForeColor = System.Drawing.Color.Black;
+            this.Days.ForeColor = System.Drawing.Color.White;
             this.Days.Location = new System.Drawing.Point(260, 115);
             this.Days.Name = "Days";
             this.Days.Size = new System.Drawing.Size(41, 19);
@@ -404,7 +405,7 @@
             // 
             this.Room.AutoSize = true;
             this.Room.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Room.ForeColor = System.Drawing.Color.Black;
+            this.Room.ForeColor = System.Drawing.Color.White;
             this.Room.Location = new System.Drawing.Point(261, 67);
             this.Room.Name = "Room";
             this.Room.Size = new System.Drawing.Size(47, 19);
@@ -424,7 +425,7 @@
             // 
             this.Semester.AutoSize = true;
             this.Semester.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Semester.ForeColor = System.Drawing.Color.Black;
+            this.Semester.ForeColor = System.Drawing.Color.White;
             this.Semester.Location = new System.Drawing.Point(389, 15);
             this.Semester.Name = "Semester";
             this.Semester.Size = new System.Drawing.Size(73, 19);
@@ -448,7 +449,7 @@
             // 
             this.Year_Level.AutoSize = true;
             this.Year_Level.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Year_Level.ForeColor = System.Drawing.Color.Black;
+            this.Year_Level.ForeColor = System.Drawing.Color.White;
             this.Year_Level.Location = new System.Drawing.Point(261, 15);
             this.Year_Level.Name = "Year_Level";
             this.Year_Level.Size = new System.Drawing.Size(78, 19);
@@ -474,7 +475,7 @@
             // 
             this.instructor.AutoSize = true;
             this.instructor.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructor.ForeColor = System.Drawing.Color.Black;
+            this.instructor.ForeColor = System.Drawing.Color.White;
             this.instructor.Location = new System.Drawing.Point(5, 114);
             this.instructor.Name = "instructor";
             this.instructor.Size = new System.Drawing.Size(78, 19);
@@ -495,7 +496,7 @@
             // 
             this.Subject.AutoSize = true;
             this.Subject.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subject.ForeColor = System.Drawing.Color.Black;
+            this.Subject.ForeColor = System.Drawing.Color.White;
             this.Subject.Location = new System.Drawing.Point(5, 64);
             this.Subject.Name = "Subject";
             this.Subject.Size = new System.Drawing.Size(60, 19);
@@ -516,7 +517,7 @@
             // 
             this.course.AutoSize = true;
             this.course.Font = new System.Drawing.Font("Noto Sans JP Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.course.ForeColor = System.Drawing.Color.Black;
+            this.course.ForeColor = System.Drawing.Color.White;
             this.course.Location = new System.Drawing.Point(7, 14);
             this.course.Name = "course";
             this.course.Size = new System.Drawing.Size(56, 19);
@@ -536,15 +537,15 @@
             // 
             // LINE
             // 
-            this.LINE.BackColor = System.Drawing.Color.LightGray;
-            this.LINE.Location = new System.Drawing.Point(31, 183);
+            this.LINE.BackColor = System.Drawing.Color.LightCoral;
+            this.LINE.Location = new System.Drawing.Point(17, 0);
             this.LINE.Name = "LINE";
             this.LINE.Size = new System.Drawing.Size(910, 3);
             this.LINE.TabIndex = 10;
             // 
             // CO_topPanel
             // 
-            this.CO_topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CO_topPanel.BackColor = System.Drawing.Color.LightPink;
             this.CO_topPanel.Controls.Add(this.classOffering);
             this.CO_topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.CO_topPanel.Location = new System.Drawing.Point(0, 0);

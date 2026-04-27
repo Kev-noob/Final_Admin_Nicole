@@ -83,6 +83,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Main_Container = new System.Windows.Forms.Panel();
             this.Contents = new System.Windows.Forms.Panel();
+            this.Home_ = new System.Windows.Forms.Panel();
             this.Instructor_ = new System.Windows.Forms.Panel();
             this.drop_permanent = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
@@ -95,7 +96,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Billing_ = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.Dashboard_ = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.Buttons = new System.Windows.Forms.Panel();
+            this.classOffering_ = new System.Windows.Forms.Button();
             this.home = new System.Windows.Forms.Button();
             this.dashboard = new System.Windows.Forms.Button();
             this.enrollment = new System.Windows.Forms.Button();
@@ -103,10 +107,6 @@
             this.billing = new System.Windows.Forms.Button();
             this.admins = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.Button();
-            this.classOffering_ = new System.Windows.Forms.Button();
-            this.Home_ = new System.Windows.Forms.Panel();
-            this.Dashboard_ = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.Enrollment_.SuspendLayout();
             this.Enroll_AlignSubject.SuspendLayout();
             this.current_alignment.SuspendLayout();
@@ -124,8 +124,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pending_INS)).BeginInit();
             this.Admins_.SuspendLayout();
             this.Billing_.SuspendLayout();
-            this.Buttons.SuspendLayout();
             this.Dashboard_.SuspendLayout();
+            this.Buttons.SuspendLayout();
             this.SuspendLayout();
             // 
             // Enrollment_
@@ -860,6 +860,16 @@
             this.Contents.Size = new System.Drawing.Size(900, 532);
             this.Contents.TabIndex = 0;
             // 
+            // Home_
+            // 
+            this.Home_.BackgroundImage = global::Super_Admin_Rolly.Properties.Resources.home_gf;
+            this.Home_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Home_.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Home_.Location = new System.Drawing.Point(0, 0);
+            this.Home_.Name = "Home_";
+            this.Home_.Size = new System.Drawing.Size(900, 532);
+            this.Home_.TabIndex = 11;
+            // 
             // Instructor_
             // 
             this.Instructor_.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1021,6 +1031,30 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "BiIling";
             // 
+            // Dashboard_
+            // 
+            this.Dashboard_.BackgroundImage = global::Super_Admin_Rolly.Properties.Resources.white_tip;
+            this.Dashboard_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Dashboard_.Controls.Add(this.label5);
+            this.Dashboard_.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Dashboard_.Location = new System.Drawing.Point(0, 0);
+            this.Dashboard_.Name = "Dashboard_";
+            this.Dashboard_.Size = new System.Drawing.Size(900, 532);
+            this.Dashboard_.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(336, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Dashboard";
+            // 
             // Buttons
             // 
             this.Buttons.BackColor = System.Drawing.Color.DarkOliveGreen;
@@ -1037,6 +1071,25 @@
             this.Buttons.Name = "Buttons";
             this.Buttons.Size = new System.Drawing.Size(900, 70);
             this.Buttons.TabIndex = 8;
+            // 
+            // classOffering_
+            // 
+            this.classOffering_.BackColor = System.Drawing.Color.Transparent;
+            this.classOffering_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.classOffering_.FlatAppearance.BorderSize = 0;
+            this.classOffering_.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
+            this.classOffering_.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.classOffering_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classOffering_.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classOffering_.ForeColor = System.Drawing.Color.White;
+            this.classOffering_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.classOffering_.Location = new System.Drawing.Point(283, 15);
+            this.classOffering_.Name = "classOffering_";
+            this.classOffering_.Size = new System.Drawing.Size(97, 38);
+            this.classOffering_.TabIndex = 8;
+            this.classOffering_.Text = "Class offering";
+            this.classOffering_.UseVisualStyleBackColor = false;
+            this.classOffering_.Click += new System.EventHandler(this.classOffering__Click);
             // 
             // home
             // 
@@ -1171,59 +1224,6 @@
             this.logout.UseVisualStyleBackColor = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
-            // classOffering_
-            // 
-            this.classOffering_.BackColor = System.Drawing.Color.Transparent;
-            this.classOffering_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.classOffering_.FlatAppearance.BorderSize = 0;
-            this.classOffering_.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.classOffering_.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
-            this.classOffering_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.classOffering_.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classOffering_.ForeColor = System.Drawing.Color.White;
-            this.classOffering_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.classOffering_.Location = new System.Drawing.Point(283, 15);
-            this.classOffering_.Name = "classOffering_";
-            this.classOffering_.Size = new System.Drawing.Size(97, 38);
-            this.classOffering_.TabIndex = 8;
-            this.classOffering_.Text = "Class offering";
-            this.classOffering_.UseVisualStyleBackColor = false;
-            this.classOffering_.Click += new System.EventHandler(this.classOffering__Click);
-            // 
-            // Home_
-            // 
-            this.Home_.BackgroundImage = global::Super_Admin_Rolly.Properties.Resources.home_gf;
-            this.Home_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Home_.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Home_.Location = new System.Drawing.Point(0, 0);
-            this.Home_.Name = "Home_";
-            this.Home_.Size = new System.Drawing.Size(900, 532);
-            this.Home_.TabIndex = 11;
-            // 
-            // Dashboard_
-            // 
-            this.Dashboard_.BackgroundImage = global::Super_Admin_Rolly.Properties.Resources.white_tip;
-            this.Dashboard_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Dashboard_.Controls.Add(this.label5);
-            this.Dashboard_.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Dashboard_.Location = new System.Drawing.Point(0, 0);
-            this.Dashboard_.Name = "Dashboard_";
-            this.Dashboard_.Size = new System.Drawing.Size(900, 532);
-            this.Dashboard_.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(336, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 31);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Dashboard";
-            // 
             // Main_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1261,9 +1261,9 @@
             this.Admins_.PerformLayout();
             this.Billing_.ResumeLayout(false);
             this.Billing_.PerformLayout();
-            this.Buttons.ResumeLayout(false);
             this.Dashboard_.ResumeLayout(false);
             this.Dashboard_.PerformLayout();
+            this.Buttons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
