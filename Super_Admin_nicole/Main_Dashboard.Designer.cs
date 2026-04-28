@@ -83,6 +83,43 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Main_Container = new System.Windows.Forms.Panel();
             this.Contents = new System.Windows.Forms.Panel();
+            this.Billing_ = new System.Windows.Forms.Panel();
+            this.contents_panel = new System.Windows.Forms.Panel();
+            this.view_bill = new System.Windows.Forms.Panel();
+            this.PayButton = new System.Windows.Forms.Button();
+            this.Pay_bills_lbl = new System.Windows.Forms.Label();
+            this.PayBills = new System.Windows.Forms.TextBox();
+            this.Filter_lbl = new System.Windows.Forms.Label();
+            this.Filter_cmbx = new System.Windows.Forms.ComboBox();
+            this.GridView_billedStudents = new System.Windows.Forms.DataGridView();
+            this.AdjustBill = new System.Windows.Forms.Panel();
+            this.Line_horizontal = new System.Windows.Forms.FlowLayoutPanel();
+            this.YearLevel_lbl = new System.Windows.Forms.Label();
+            this.YearLevel = new System.Windows.Forms.ComboBox();
+            this.GenerateBilling = new System.Windows.Forms.Button();
+            this.computation_display = new System.Windows.Forms.Panel();
+            this.PricePerStudents = new System.Windows.Forms.Label();
+            this.TotalStudents = new System.Windows.Forms.Label();
+            this.PricePerUnits = new System.Windows.Forms.Label();
+            this.TotalUnits = new System.Windows.Forms.Label();
+            this.TotalSubject = new System.Windows.Forms.Label();
+            this.PricePerStudents_lbl = new System.Windows.Forms.Label();
+            this.HorizonatalLine_2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.TotalStudent_lbl = new System.Windows.Forms.Label();
+            this.PricePerUnit_lbl = new System.Windows.Forms.Label();
+            this.TotalUnits_lbl = new System.Windows.Forms.Label();
+            this.TotalSubjectd_lbl = new System.Windows.Forms.Label();
+            this.SaveRate = new System.Windows.Forms.Button();
+            this.Course_lbl = new System.Windows.Forms.Label();
+            this.Course_cmbx = new System.Windows.Forms.ComboBox();
+            this.Generate_bill_lbl = new System.Windows.Forms.Label();
+            this.School_year_lbl = new System.Windows.Forms.Label();
+            this.Semester_lbl = new System.Windows.Forms.Label();
+            this.Price_per_unit = new System.Windows.Forms.Label();
+            this.Set_tuition_rate = new System.Windows.Forms.Label();
+            this.Semester_cmbx = new System.Windows.Forms.ComboBox();
+            this.SchoolYear = new System.Windows.Forms.TextBox();
+            this.PricePerUnit = new System.Windows.Forms.TextBox();
             this.Home_ = new System.Windows.Forms.Panel();
             this.Instructor_ = new System.Windows.Forms.Panel();
             this.drop_permanent = new System.Windows.Forms.Button();
@@ -94,8 +131,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Admins_ = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.Billing_ = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.Dashboard_ = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.Buttons = new System.Windows.Forms.Panel();
@@ -119,11 +154,16 @@
             this.side_panel.SuspendLayout();
             this.Main_Container.SuspendLayout();
             this.Contents.SuspendLayout();
+            this.Billing_.SuspendLayout();
+            this.contents_panel.SuspendLayout();
+            this.view_bill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView_billedStudents)).BeginInit();
+            this.AdjustBill.SuspendLayout();
+            this.computation_display.SuspendLayout();
             this.Instructor_.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.approved_INS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pending_INS)).BeginInit();
             this.Admins_.SuspendLayout();
-            this.Billing_.SuspendLayout();
             this.Dashboard_.SuspendLayout();
             this.Buttons.SuspendLayout();
             this.SuspendLayout();
@@ -848,17 +888,467 @@
             // 
             // Contents
             // 
+            this.Contents.Controls.Add(this.Billing_);
             this.Contents.Controls.Add(this.Enrollment_);
             this.Contents.Controls.Add(this.Home_);
             this.Contents.Controls.Add(this.Instructor_);
             this.Contents.Controls.Add(this.Admins_);
-            this.Contents.Controls.Add(this.Billing_);
             this.Contents.Controls.Add(this.Dashboard_);
             this.Contents.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Contents.Location = new System.Drawing.Point(0, 68);
             this.Contents.Name = "Contents";
             this.Contents.Size = new System.Drawing.Size(900, 532);
             this.Contents.TabIndex = 0;
+            // 
+            // Billing_
+            // 
+            this.Billing_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Billing_.Controls.Add(this.contents_panel);
+            this.Billing_.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Billing_.Location = new System.Drawing.Point(0, 0);
+            this.Billing_.Name = "Billing_";
+            this.Billing_.Size = new System.Drawing.Size(900, 532);
+            this.Billing_.TabIndex = 13;
+            // 
+            // contents_panel
+            // 
+            this.contents_panel.BackColor = System.Drawing.Color.White;
+            this.contents_panel.Controls.Add(this.view_bill);
+            this.contents_panel.Controls.Add(this.AdjustBill);
+            this.contents_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contents_panel.Location = new System.Drawing.Point(0, 0);
+            this.contents_panel.Name = "contents_panel";
+            this.contents_panel.Size = new System.Drawing.Size(900, 532);
+            this.contents_panel.TabIndex = 13;
+            // 
+            // view_bill
+            // 
+            this.view_bill.Controls.Add(this.PayButton);
+            this.view_bill.Controls.Add(this.Pay_bills_lbl);
+            this.view_bill.Controls.Add(this.PayBills);
+            this.view_bill.Controls.Add(this.Filter_lbl);
+            this.view_bill.Controls.Add(this.Filter_cmbx);
+            this.view_bill.Controls.Add(this.GridView_billedStudents);
+            this.view_bill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_bill.Location = new System.Drawing.Point(0, 229);
+            this.view_bill.Name = "view_bill";
+            this.view_bill.Size = new System.Drawing.Size(900, 303);
+            this.view_bill.TabIndex = 2;
+            // 
+            // PayButton
+            // 
+            this.PayButton.BackColor = System.Drawing.Color.Transparent;
+            this.PayButton.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.PayButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PayButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PayButton.Font = new System.Drawing.Font("Noto Sans JP", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PayButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.PayButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.PayButton.Location = new System.Drawing.Point(761, 40);
+            this.PayButton.Name = "PayButton";
+            this.PayButton.Size = new System.Drawing.Size(88, 25);
+            this.PayButton.TabIndex = 16;
+            this.PayButton.Text = "Record";
+            this.PayButton.UseVisualStyleBackColor = false;
+            this.PayButton.Click += new System.EventHandler(this.PayButton_Click);
+            // 
+            // Pay_bills_lbl
+            // 
+            this.Pay_bills_lbl.AutoSize = true;
+            this.Pay_bills_lbl.Font = new System.Drawing.Font("Noto Sans JP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Pay_bills_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Pay_bills_lbl.Location = new System.Drawing.Point(368, 11);
+            this.Pay_bills_lbl.Name = "Pay_bills_lbl";
+            this.Pay_bills_lbl.Size = new System.Drawing.Size(75, 24);
+            this.Pay_bills_lbl.TabIndex = 21;
+            this.Pay_bills_lbl.Text = "Pay bills";
+            // 
+            // PayBills
+            // 
+            this.PayBills.Font = new System.Drawing.Font("Noto Sans JP Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PayBills.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.PayBills.Location = new System.Drawing.Point(366, 38);
+            this.PayBills.Multiline = true;
+            this.PayBills.Name = "PayBills";
+            this.PayBills.Size = new System.Drawing.Size(375, 28);
+            this.PayBills.TabIndex = 20;
+            // 
+            // Filter_lbl
+            // 
+            this.Filter_lbl.AutoSize = true;
+            this.Filter_lbl.Font = new System.Drawing.Font("Noto Sans JP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Filter_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Filter_lbl.Location = new System.Drawing.Point(37, 9);
+            this.Filter_lbl.Name = "Filter_lbl";
+            this.Filter_lbl.Size = new System.Drawing.Size(52, 24);
+            this.Filter_lbl.TabIndex = 11;
+            this.Filter_lbl.Text = "Filter";
+            // 
+            // Filter_cmbx
+            // 
+            this.Filter_cmbx.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Filter_cmbx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Filter_cmbx.FormattingEnabled = true;
+            this.Filter_cmbx.Items.AddRange(new object[] {
+            "All status",
+            "Paid",
+            "Partial",
+            "Unpaid"});
+            this.Filter_cmbx.Location = new System.Drawing.Point(37, 36);
+            this.Filter_cmbx.Name = "Filter_cmbx";
+            this.Filter_cmbx.Size = new System.Drawing.Size(272, 29);
+            this.Filter_cmbx.TabIndex = 10;
+            this.Filter_cmbx.SelectedIndexChanged += new System.EventHandler(this.Filter_cmbx_SelectedIndexChanged);
+            // 
+            // GridView_billedStudents
+            // 
+            this.GridView_billedStudents.AllowUserToAddRows = false;
+            this.GridView_billedStudents.AllowUserToResizeColumns = false;
+            this.GridView_billedStudents.AllowUserToResizeRows = false;
+            this.GridView_billedStudents.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.GridView_billedStudents.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.GridView_billedStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridView_billedStudents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.GridView_billedStudents.Location = new System.Drawing.Point(66, 72);
+            this.GridView_billedStudents.Name = "GridView_billedStudents";
+            this.GridView_billedStudents.ReadOnly = true;
+            this.GridView_billedStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridView_billedStudents.Size = new System.Drawing.Size(763, 215);
+            this.GridView_billedStudents.TabIndex = 1;
+            this.GridView_billedStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_billedStudents_CellClick);
+            // 
+            // AdjustBill
+            // 
+            this.AdjustBill.Controls.Add(this.Line_horizontal);
+            this.AdjustBill.Controls.Add(this.YearLevel_lbl);
+            this.AdjustBill.Controls.Add(this.YearLevel);
+            this.AdjustBill.Controls.Add(this.GenerateBilling);
+            this.AdjustBill.Controls.Add(this.computation_display);
+            this.AdjustBill.Controls.Add(this.SaveRate);
+            this.AdjustBill.Controls.Add(this.Course_lbl);
+            this.AdjustBill.Controls.Add(this.Course_cmbx);
+            this.AdjustBill.Controls.Add(this.Generate_bill_lbl);
+            this.AdjustBill.Controls.Add(this.School_year_lbl);
+            this.AdjustBill.Controls.Add(this.Semester_lbl);
+            this.AdjustBill.Controls.Add(this.Price_per_unit);
+            this.AdjustBill.Controls.Add(this.Set_tuition_rate);
+            this.AdjustBill.Controls.Add(this.Semester_cmbx);
+            this.AdjustBill.Controls.Add(this.SchoolYear);
+            this.AdjustBill.Controls.Add(this.PricePerUnit);
+            this.AdjustBill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AdjustBill.Font = new System.Drawing.Font("Noto Sans JP Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdjustBill.Location = new System.Drawing.Point(0, 0);
+            this.AdjustBill.Name = "AdjustBill";
+            this.AdjustBill.Size = new System.Drawing.Size(900, 229);
+            this.AdjustBill.TabIndex = 0;
+            // 
+            // Line_horizontal
+            // 
+            this.Line_horizontal.BackColor = System.Drawing.Color.Pink;
+            this.Line_horizontal.Location = new System.Drawing.Point(0, 223);
+            this.Line_horizontal.Name = "Line_horizontal";
+            this.Line_horizontal.Size = new System.Drawing.Size(904, 3);
+            this.Line_horizontal.TabIndex = 11;
+            // 
+            // YearLevel_lbl
+            // 
+            this.YearLevel_lbl.AutoSize = true;
+            this.YearLevel_lbl.Font = new System.Drawing.Font("Noto Sans JP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.YearLevel_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.YearLevel_lbl.Location = new System.Drawing.Point(342, 88);
+            this.YearLevel_lbl.Name = "YearLevel_lbl";
+            this.YearLevel_lbl.Size = new System.Drawing.Size(84, 24);
+            this.YearLevel_lbl.TabIndex = 15;
+            this.YearLevel_lbl.Text = "Year level";
+            // 
+            // YearLevel
+            // 
+            this.YearLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.YearLevel.FormattingEnabled = true;
+            this.YearLevel.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.YearLevel.Location = new System.Drawing.Point(469, 84);
+            this.YearLevel.Name = "YearLevel";
+            this.YearLevel.Size = new System.Drawing.Size(155, 28);
+            this.YearLevel.TabIndex = 14;
+            this.YearLevel.SelectedIndexChanged += new System.EventHandler(this.YearLevel_SelectedIndexChanged);
+            // 
+            // GenerateBilling
+            // 
+            this.GenerateBilling.BackColor = System.Drawing.Color.Transparent;
+            this.GenerateBilling.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.GenerateBilling.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GenerateBilling.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GenerateBilling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GenerateBilling.Font = new System.Drawing.Font("Noto Sans JP", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.GenerateBilling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.GenerateBilling.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.GenerateBilling.Location = new System.Drawing.Point(413, 180);
+            this.GenerateBilling.Name = "GenerateBilling";
+            this.GenerateBilling.Size = new System.Drawing.Size(211, 25);
+            this.GenerateBilling.TabIndex = 13;
+            this.GenerateBilling.Text = "Generate billing";
+            this.GenerateBilling.UseVisualStyleBackColor = false;
+            this.GenerateBilling.Click += new System.EventHandler(this.GenerateBilling_Click);
+            // 
+            // computation_display
+            // 
+            this.computation_display.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.computation_display.Controls.Add(this.PricePerStudents);
+            this.computation_display.Controls.Add(this.TotalStudents);
+            this.computation_display.Controls.Add(this.PricePerUnits);
+            this.computation_display.Controls.Add(this.TotalUnits);
+            this.computation_display.Controls.Add(this.TotalSubject);
+            this.computation_display.Controls.Add(this.PricePerStudents_lbl);
+            this.computation_display.Controls.Add(this.HorizonatalLine_2);
+            this.computation_display.Controls.Add(this.TotalStudent_lbl);
+            this.computation_display.Controls.Add(this.PricePerUnit_lbl);
+            this.computation_display.Controls.Add(this.TotalUnits_lbl);
+            this.computation_display.Controls.Add(this.TotalSubjectd_lbl);
+            this.computation_display.Location = new System.Drawing.Point(633, 50);
+            this.computation_display.Name = "computation_display";
+            this.computation_display.Size = new System.Drawing.Size(255, 163);
+            this.computation_display.TabIndex = 12;
+            // 
+            // PricePerStudents
+            // 
+            this.PricePerStudents.Font = new System.Drawing.Font("Noto Sans JP", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PricePerStudents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.PricePerStudents.Location = new System.Drawing.Point(148, 106);
+            this.PricePerStudents.Name = "PricePerStudents";
+            this.PricePerStudents.Size = new System.Drawing.Size(104, 19);
+            this.PricePerStudents.TabIndex = 20;
+            // 
+            // TotalStudents
+            // 
+            this.TotalStudents.Font = new System.Drawing.Font("Noto Sans JP Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TotalStudents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(129)))), ((int)(((byte)(149)))));
+            this.TotalStudents.Location = new System.Drawing.Point(157, 76);
+            this.TotalStudents.Name = "TotalStudents";
+            this.TotalStudents.Size = new System.Drawing.Size(88, 17);
+            this.TotalStudents.TabIndex = 19;
+            // 
+            // PricePerUnits
+            // 
+            this.PricePerUnits.Font = new System.Drawing.Font("Noto Sans JP Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PricePerUnits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(129)))), ((int)(((byte)(149)))));
+            this.PricePerUnits.Location = new System.Drawing.Point(157, 53);
+            this.PricePerUnits.Name = "PricePerUnits";
+            this.PricePerUnits.Size = new System.Drawing.Size(88, 17);
+            this.PricePerUnits.TabIndex = 18;
+            // 
+            // TotalUnits
+            // 
+            this.TotalUnits.Font = new System.Drawing.Font("Noto Sans JP Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TotalUnits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(129)))), ((int)(((byte)(149)))));
+            this.TotalUnits.Location = new System.Drawing.Point(157, 30);
+            this.TotalUnits.Name = "TotalUnits";
+            this.TotalUnits.Size = new System.Drawing.Size(88, 17);
+            this.TotalUnits.TabIndex = 17;
+            // 
+            // TotalSubject
+            // 
+            this.TotalSubject.Font = new System.Drawing.Font("Noto Sans JP Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TotalSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(129)))), ((int)(((byte)(149)))));
+            this.TotalSubject.Location = new System.Drawing.Point(157, 7);
+            this.TotalSubject.Name = "TotalSubject";
+            this.TotalSubject.Size = new System.Drawing.Size(88, 17);
+            this.TotalSubject.TabIndex = 16;
+            // 
+            // PricePerStudents_lbl
+            // 
+            this.PricePerStudents_lbl.AutoSize = true;
+            this.PricePerStudents_lbl.Font = new System.Drawing.Font("Noto Sans JP", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PricePerStudents_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.PricePerStudents_lbl.Location = new System.Drawing.Point(11, 107);
+            this.PricePerStudents_lbl.Name = "PricePerStudents_lbl";
+            this.PricePerStudents_lbl.Size = new System.Drawing.Size(119, 19);
+            this.PricePerStudents_lbl.TabIndex = 15;
+            this.PricePerStudents_lbl.Text = "Price per student";
+            // 
+            // HorizonatalLine_2
+            // 
+            this.HorizonatalLine_2.BackColor = System.Drawing.Color.Gainsboro;
+            this.HorizonatalLine_2.Location = new System.Drawing.Point(0, 99);
+            this.HorizonatalLine_2.Name = "HorizonatalLine_2";
+            this.HorizonatalLine_2.Size = new System.Drawing.Size(350, 3);
+            this.HorizonatalLine_2.TabIndex = 14;
+            // 
+            // TotalStudent_lbl
+            // 
+            this.TotalStudent_lbl.AutoSize = true;
+            this.TotalStudent_lbl.Font = new System.Drawing.Font("Noto Sans JP Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TotalStudent_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(129)))), ((int)(((byte)(149)))));
+            this.TotalStudent_lbl.Location = new System.Drawing.Point(30, 76);
+            this.TotalStudent_lbl.Name = "TotalStudent_lbl";
+            this.TotalStudent_lbl.Size = new System.Drawing.Size(85, 17);
+            this.TotalStudent_lbl.TabIndex = 13;
+            this.TotalStudent_lbl.Text = "Total student";
+            // 
+            // PricePerUnit_lbl
+            // 
+            this.PricePerUnit_lbl.AutoSize = true;
+            this.PricePerUnit_lbl.Font = new System.Drawing.Font("Noto Sans JP Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PricePerUnit_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(129)))), ((int)(((byte)(149)))));
+            this.PricePerUnit_lbl.Location = new System.Drawing.Point(30, 53);
+            this.PricePerUnit_lbl.Name = "PricePerUnit_lbl";
+            this.PricePerUnit_lbl.Size = new System.Drawing.Size(85, 17);
+            this.PricePerUnit_lbl.TabIndex = 12;
+            this.PricePerUnit_lbl.Text = "Price per unit";
+            // 
+            // TotalUnits_lbl
+            // 
+            this.TotalUnits_lbl.AutoSize = true;
+            this.TotalUnits_lbl.Font = new System.Drawing.Font("Noto Sans JP Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TotalUnits_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(129)))), ((int)(((byte)(149)))));
+            this.TotalUnits_lbl.Location = new System.Drawing.Point(30, 30);
+            this.TotalUnits_lbl.Name = "TotalUnits_lbl";
+            this.TotalUnits_lbl.Size = new System.Drawing.Size(68, 17);
+            this.TotalUnits_lbl.TabIndex = 11;
+            this.TotalUnits_lbl.Text = "Total units";
+            // 
+            // TotalSubjectd_lbl
+            // 
+            this.TotalSubjectd_lbl.AutoSize = true;
+            this.TotalSubjectd_lbl.Font = new System.Drawing.Font("Noto Sans JP Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TotalSubjectd_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(129)))), ((int)(((byte)(149)))));
+            this.TotalSubjectd_lbl.Location = new System.Drawing.Point(30, 7);
+            this.TotalSubjectd_lbl.Name = "TotalSubjectd_lbl";
+            this.TotalSubjectd_lbl.Size = new System.Drawing.Size(88, 17);
+            this.TotalSubjectd_lbl.TabIndex = 10;
+            this.TotalSubjectd_lbl.Text = "Total subjects";
+            // 
+            // SaveRate
+            // 
+            this.SaveRate.BackColor = System.Drawing.Color.Transparent;
+            this.SaveRate.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.SaveRate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SaveRate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SaveRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveRate.Font = new System.Drawing.Font("Noto Sans JP", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SaveRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.SaveRate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SaveRate.Location = new System.Drawing.Point(77, 180);
+            this.SaveRate.Name = "SaveRate";
+            this.SaveRate.Size = new System.Drawing.Size(211, 25);
+            this.SaveRate.TabIndex = 11;
+            this.SaveRate.Text = "Save rate";
+            this.SaveRate.UseVisualStyleBackColor = false;
+            this.SaveRate.Click += new System.EventHandler(this.SaveRate_Click);
+            // 
+            // Course_lbl
+            // 
+            this.Course_lbl.AutoSize = true;
+            this.Course_lbl.Font = new System.Drawing.Font("Noto Sans JP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Course_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Course_lbl.Location = new System.Drawing.Point(342, 53);
+            this.Course_lbl.Name = "Course_lbl";
+            this.Course_lbl.Size = new System.Drawing.Size(65, 24);
+            this.Course_lbl.TabIndex = 9;
+            this.Course_lbl.Text = "Course";
+            // 
+            // Course_cmbx
+            // 
+            this.Course_cmbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Course_cmbx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Course_cmbx.FormattingEnabled = true;
+            this.Course_cmbx.Location = new System.Drawing.Point(424, 50);
+            this.Course_cmbx.Name = "Course_cmbx";
+            this.Course_cmbx.Size = new System.Drawing.Size(200, 28);
+            this.Course_cmbx.TabIndex = 8;
+            // 
+            // Generate_bill_lbl
+            // 
+            this.Generate_bill_lbl.AutoSize = true;
+            this.Generate_bill_lbl.Font = new System.Drawing.Font("Noto Sans JP", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Generate_bill_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Generate_bill_lbl.Location = new System.Drawing.Point(340, 5);
+            this.Generate_bill_lbl.Name = "Generate_bill_lbl";
+            this.Generate_bill_lbl.Size = new System.Drawing.Size(132, 27);
+            this.Generate_bill_lbl.TabIndex = 7;
+            this.Generate_bill_lbl.Text = "Generate bill\r\n";
+            // 
+            // School_year_lbl
+            // 
+            this.School_year_lbl.AutoSize = true;
+            this.School_year_lbl.Font = new System.Drawing.Font("Noto Sans JP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.School_year_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.School_year_lbl.Location = new System.Drawing.Point(8, 93);
+            this.School_year_lbl.Name = "School_year_lbl";
+            this.School_year_lbl.Size = new System.Drawing.Size(84, 24);
+            this.School_year_lbl.TabIndex = 6;
+            this.School_year_lbl.Text = "Year level";
+            // 
+            // Semester_lbl
+            // 
+            this.Semester_lbl.AutoSize = true;
+            this.Semester_lbl.Font = new System.Drawing.Font("Noto Sans JP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Semester_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Semester_lbl.Location = new System.Drawing.Point(8, 135);
+            this.Semester_lbl.Name = "Semester_lbl";
+            this.Semester_lbl.Size = new System.Drawing.Size(84, 24);
+            this.Semester_lbl.TabIndex = 5;
+            this.Semester_lbl.Text = "Semester";
+            // 
+            // Price_per_unit
+            // 
+            this.Price_per_unit.AutoSize = true;
+            this.Price_per_unit.Font = new System.Drawing.Font("Noto Sans JP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Price_per_unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Price_per_unit.Location = new System.Drawing.Point(8, 53);
+            this.Price_per_unit.Name = "Price_per_unit";
+            this.Price_per_unit.Size = new System.Drawing.Size(116, 24);
+            this.Price_per_unit.TabIndex = 4;
+            this.Price_per_unit.Text = "Price per unit";
+            // 
+            // Set_tuition_rate
+            // 
+            this.Set_tuition_rate.AutoSize = true;
+            this.Set_tuition_rate.Font = new System.Drawing.Font("Noto Sans JP", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Set_tuition_rate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Set_tuition_rate.Location = new System.Drawing.Point(3, 10);
+            this.Set_tuition_rate.Name = "Set_tuition_rate";
+            this.Set_tuition_rate.Size = new System.Drawing.Size(153, 27);
+            this.Set_tuition_rate.TabIndex = 3;
+            this.Set_tuition_rate.Text = "Set tuition rate";
+            // 
+            // Semester_cmbx
+            // 
+            this.Semester_cmbx.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Semester_cmbx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.Semester_cmbx.FormattingEnabled = true;
+            this.Semester_cmbx.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.Semester_cmbx.Location = new System.Drawing.Point(129, 133);
+            this.Semester_cmbx.Name = "Semester_cmbx";
+            this.Semester_cmbx.Size = new System.Drawing.Size(159, 29);
+            this.Semester_cmbx.TabIndex = 2;
+            // 
+            // SchoolYear
+            // 
+            this.SchoolYear.Font = new System.Drawing.Font("Noto Sans JP Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SchoolYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.SchoolYear.Location = new System.Drawing.Point(129, 93);
+            this.SchoolYear.Multiline = true;
+            this.SchoolYear.Name = "SchoolYear";
+            this.SchoolYear.Size = new System.Drawing.Size(159, 28);
+            this.SchoolYear.TabIndex = 1;
+            // 
+            // PricePerUnit
+            // 
+            this.PricePerUnit.Font = new System.Drawing.Font("Noto Sans JP Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PricePerUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
+            this.PricePerUnit.Location = new System.Drawing.Point(130, 54);
+            this.PricePerUnit.Multiline = true;
+            this.PricePerUnit.Name = "PricePerUnit";
+            this.PricePerUnit.Size = new System.Drawing.Size(159, 28);
+            this.PricePerUnit.TabIndex = 0;
             // 
             // Home_
             // 
@@ -1008,29 +1498,6 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "Billing";
             // 
-            // Billing_
-            // 
-            this.Billing_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Billing_.Controls.Add(this.label7);
-            this.Billing_.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Billing_.Location = new System.Drawing.Point(0, 0);
-            this.Billing_.Name = "Billing_";
-            this.Billing_.Size = new System.Drawing.Size(900, 532);
-            this.Billing_.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(301, 40);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 31);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "BiIling";
-            // 
             // Dashboard_
             // 
             this.Dashboard_.BackgroundImage = global::Super_Admin_Rolly.Properties.Resources.white_tip;
@@ -1057,7 +1524,7 @@
             // 
             // Buttons
             // 
-            this.Buttons.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.Buttons.BackColor = System.Drawing.Color.LightPink;
             this.Buttons.Controls.Add(this.classOffering_);
             this.Buttons.Controls.Add(this.home);
             this.Buttons.Controls.Add(this.dashboard);
@@ -1077,11 +1544,11 @@
             this.classOffering_.BackColor = System.Drawing.Color.Transparent;
             this.classOffering_.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.classOffering_.FlatAppearance.BorderSize = 0;
-            this.classOffering_.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.classOffering_.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.classOffering_.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LavenderBlush;
+            this.classOffering_.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.classOffering_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.classOffering_.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classOffering_.ForeColor = System.Drawing.Color.White;
+            this.classOffering_.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.classOffering_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.classOffering_.Location = new System.Drawing.Point(283, 15);
             this.classOffering_.Name = "classOffering_";
@@ -1096,11 +1563,11 @@
             this.home.BackColor = System.Drawing.Color.Transparent;
             this.home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.home.FlatAppearance.BorderSize = 0;
-            this.home.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.home.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LavenderBlush;
+            this.home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.home.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.home.ForeColor = System.Drawing.Color.White;
+            this.home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.home.Location = new System.Drawing.Point(194, 14);
             this.home.Name = "home";
@@ -1115,11 +1582,11 @@
             this.dashboard.BackColor = System.Drawing.Color.Transparent;
             this.dashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.dashboard.FlatAppearance.BorderSize = 0;
-            this.dashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.dashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.dashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LavenderBlush;
+            this.dashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboard.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard.ForeColor = System.Drawing.Color.White;
+            this.dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboard.Location = new System.Drawing.Point(386, 15);
             this.dashboard.Name = "dashboard";
@@ -1134,11 +1601,11 @@
             this.enrollment.BackColor = System.Drawing.Color.Transparent;
             this.enrollment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.enrollment.FlatAppearance.BorderSize = 0;
-            this.enrollment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.enrollment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.enrollment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LavenderBlush;
+            this.enrollment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.enrollment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enrollment.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enrollment.ForeColor = System.Drawing.Color.White;
+            this.enrollment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.enrollment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.enrollment.Location = new System.Drawing.Point(487, 15);
             this.enrollment.Name = "enrollment";
@@ -1153,11 +1620,11 @@
             this.instructor.BackColor = System.Drawing.Color.Transparent;
             this.instructor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.instructor.FlatAppearance.BorderSize = 0;
-            this.instructor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.instructor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.instructor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LavenderBlush;
+            this.instructor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.instructor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.instructor.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructor.ForeColor = System.Drawing.Color.White;
+            this.instructor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.instructor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.instructor.Location = new System.Drawing.Point(579, 15);
             this.instructor.Name = "instructor";
@@ -1172,11 +1639,11 @@
             this.billing.BackColor = System.Drawing.Color.Transparent;
             this.billing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.billing.FlatAppearance.BorderSize = 0;
-            this.billing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.billing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.billing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LavenderBlush;
+            this.billing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.billing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.billing.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billing.ForeColor = System.Drawing.Color.White;
+            this.billing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.billing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.billing.Location = new System.Drawing.Point(657, 15);
             this.billing.Name = "billing";
@@ -1191,11 +1658,11 @@
             this.admins.BackColor = System.Drawing.Color.Transparent;
             this.admins.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.admins.FlatAppearance.BorderSize = 0;
-            this.admins.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.admins.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.admins.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LavenderBlush;
+            this.admins.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.admins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.admins.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admins.ForeColor = System.Drawing.Color.White;
+            this.admins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.admins.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.admins.Location = new System.Drawing.Point(740, 14);
             this.admins.Name = "admins";
@@ -1210,11 +1677,11 @@
             this.logout.BackColor = System.Drawing.Color.Transparent;
             this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.logout.FlatAppearance.BorderSize = 0;
-            this.logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OliveDrab;
-            this.logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LavenderBlush;
+            this.logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout.ForeColor = System.Drawing.Color.White;
+            this.logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(58)))), ((int)(((byte)(101)))));
             this.logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logout.Location = new System.Drawing.Point(809, 15);
             this.logout.Name = "logout";
@@ -1253,14 +1720,21 @@
             this.side_panel.PerformLayout();
             this.Main_Container.ResumeLayout(false);
             this.Contents.ResumeLayout(false);
+            this.Billing_.ResumeLayout(false);
+            this.contents_panel.ResumeLayout(false);
+            this.view_bill.ResumeLayout(false);
+            this.view_bill.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView_billedStudents)).EndInit();
+            this.AdjustBill.ResumeLayout(false);
+            this.AdjustBill.PerformLayout();
+            this.computation_display.ResumeLayout(false);
+            this.computation_display.PerformLayout();
             this.Instructor_.ResumeLayout(false);
             this.Instructor_.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.approved_INS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pending_INS)).EndInit();
             this.Admins_.ResumeLayout(false);
             this.Admins_.PerformLayout();
-            this.Billing_.ResumeLayout(false);
-            this.Billing_.PerformLayout();
             this.Dashboard_.ResumeLayout(false);
             this.Dashboard_.PerformLayout();
             this.Buttons.ResumeLayout(false);
@@ -1313,7 +1787,6 @@
         private System.Windows.Forms.Button course_switch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel Billing_;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel Instructor_;
         private System.Windows.Forms.Panel Admins_;
         private System.Windows.Forms.Label label11;
@@ -1347,5 +1820,41 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button subjectAlign;
         private System.Windows.Forms.Button classOffering_;
+        private System.Windows.Forms.Panel contents_panel;
+        private System.Windows.Forms.Panel view_bill;
+        private System.Windows.Forms.Button PayButton;
+        private System.Windows.Forms.Label Pay_bills_lbl;
+        private System.Windows.Forms.TextBox PayBills;
+        private System.Windows.Forms.Label Filter_lbl;
+        private System.Windows.Forms.ComboBox Filter_cmbx;
+        private System.Windows.Forms.DataGridView GridView_billedStudents;
+        private System.Windows.Forms.Panel AdjustBill;
+        private System.Windows.Forms.FlowLayoutPanel Line_horizontal;
+        private System.Windows.Forms.Label YearLevel_lbl;
+        private System.Windows.Forms.ComboBox YearLevel;
+        private System.Windows.Forms.Button GenerateBilling;
+        private System.Windows.Forms.Panel computation_display;
+        private System.Windows.Forms.Label PricePerStudents;
+        private System.Windows.Forms.Label TotalStudents;
+        private System.Windows.Forms.Label PricePerUnits;
+        private System.Windows.Forms.Label TotalUnits;
+        private System.Windows.Forms.Label TotalSubject;
+        private System.Windows.Forms.Label PricePerStudents_lbl;
+        private System.Windows.Forms.FlowLayoutPanel HorizonatalLine_2;
+        private System.Windows.Forms.Label TotalStudent_lbl;
+        private System.Windows.Forms.Label PricePerUnit_lbl;
+        private System.Windows.Forms.Label TotalUnits_lbl;
+        private System.Windows.Forms.Label TotalSubjectd_lbl;
+        private System.Windows.Forms.Button SaveRate;
+        private System.Windows.Forms.Label Course_lbl;
+        private System.Windows.Forms.ComboBox Course_cmbx;
+        private System.Windows.Forms.Label Generate_bill_lbl;
+        private System.Windows.Forms.Label School_year_lbl;
+        private System.Windows.Forms.Label Semester_lbl;
+        private System.Windows.Forms.Label Price_per_unit;
+        private System.Windows.Forms.Label Set_tuition_rate;
+        private System.Windows.Forms.ComboBox Semester_cmbx;
+        private System.Windows.Forms.TextBox SchoolYear;
+        private System.Windows.Forms.TextBox PricePerUnit;
     }
 }
